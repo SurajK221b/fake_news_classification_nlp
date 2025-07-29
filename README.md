@@ -30,11 +30,12 @@ In today's digital age, the spread of misinformation has become a critical conce
 
 ## 📊 Dataset
 
-- **Source**: Kaggle Fake News Dataset
-- **Training Data**: `kaggle_fake_train.csv` (20,800+ labeled headlines)
-- **Test Data**: `kaggle_fake_test.csv` (5,200+ headlines for evaluation)
-- **Labels**: Binary classification (0 = Real News, 1 = Fake News)
-- **Features**: News headlines/titles used for classification
+- **Source**: Comprehensive Fake News Dataset
+- **Data File**: `fake_news_dataset.csv` (20,000+ labeled articles)
+- **Features**: Title, full text, date, source, author, category
+- **Labels**: Binary classification ('real'/'fake' → 0/1)
+- **Primary Feature**: News headlines/titles used for classification
+- **Additional Context**: Full article text and metadata available for enhanced analysis
 
 ## 🛠️ Technology Stack
 
@@ -53,8 +54,7 @@ In today's digital age, the spread of misinformation has become a critical conce
 fake_news_classification_nlp/
 │
 ├── 📒 Fake News Classifier.ipynb    # Main notebook with complete analysis
-├── 📊 kaggle_fake_train.csv         # Training dataset
-├── 📊 kaggle_fake_test.csv          # Testing dataset
+├── 📊 fake_news_dataset.csv         # Comprehensive dataset with news articles
 ├── 📋 README.md                     # Project documentation
 │
 ├── 📁 Plots/                        # Generated visualizations
@@ -62,8 +62,7 @@ fake_news_classification_nlp/
 │   ├── 02_ConfussionMatrix_NeiveBayes.png
 │   └── 03_ConfussionMatrix_LogisticRegression.png
 │
-└── 📦 kaggle_fake_train.7z          # Compressed training data
-└── 📦 kaggle_fake_test.7z           # Compressed test data
+└── 📦 [compressed files]            # Any additional compressed data
 ```
 
 ## 🔄 Methodology & Pipeline
@@ -190,18 +189,21 @@ print("Real News" if prediction == 0 else "Fake News")
 ## 📋 Step-by-Step Execution Guide
 
 ### Phase 1: Data Exploration 🔍
-1. Load training dataset (`kaggle_fake_train.csv`)
-2. Explore data shape, columns, and sample entries
-3. Visualize class distribution (Real vs Fake)
-4. Check for missing values and data quality
+1. Load the comprehensive dataset (`fake_news_dataset.csv`)
+2. Explore data structure, features, and sample entries
+3. Examine available metadata (source, author, category, date)
+4. Visualize class distribution (Real vs Fake)
+5. Check for missing values and data quality
+6. Convert text labels to numeric format for ML algorithms
 
 ### Phase 2: Text Preprocessing 🔄
-1. Remove ID column (unnecessary for classification)
-2. Clean text data:
+1. Analyze dataset structure and features
+2. Convert text labels ('real'/'fake') to numeric format (0/1)
+3. Clean text data:
    - Remove special characters using regex
    - Convert to lowercase
    - Tokenize into words
-3. Apply NLP techniques:
+4. Apply NLP techniques:
    - Remove English stopwords
    - Apply Porter Stemming
    - Build text corpus
@@ -235,10 +237,11 @@ print("Real News" if prediction == 0 else "Fake News")
 4. Select optimal model for deployment
 
 ### Phase 6: Prediction & Testing 🔮
-1. Load test dataset (`kaggle_fake_test.csv`)
+1. Create test samples from the main dataset
 2. Create prediction function with preprocessing
 3. Test with random headlines
-4. Validate model performance on unseen data
+4. Validate model performance on sample data
+5. Demonstrate real-time prediction capabilities
 
 ## 🔧 Customization Options
 
