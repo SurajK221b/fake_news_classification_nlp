@@ -343,12 +343,9 @@ This project is designed for educational and research purposes. When deploying f
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Suraj Kumar**
-- GitHub: [@SurajK221b](https://github.com/SurajK221b)
-- LinkedIn: [Connect with me](https://linkedin.com/in/surajk221b)
+- **GitHub**: https://github.com/SurajK221b
+- **LinkedIn**: https://www.linkedin.com/in/surajkhodade
+- **Email**: suraj.khodade7@gmail.com
 
 ## 🙏 Acknowledgments
 
