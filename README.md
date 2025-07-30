@@ -61,8 +61,7 @@ fake_news_classification_nlp/
 │   ├── 01_NewsClassification.png
 │   ├── 02_ConfussionMatrix_NeiveBayes.png
 │   └── 03_ConfussionMatrix_LogisticRegression.png
-│
-└── 📦 [compressed files]            # Any additional compressed data
+
 ```
 
 ## 🔄 Methodology & Pipeline
@@ -146,18 +145,13 @@ git clone https://github.com/SurajK221b/fake_news_classification_nlp.git
 cd fake_news_classification_nlp
 ```
 
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Download NLTK data**
+2. **Download NLTK data**
 ```python
 import nltk
 nltk.download('stopwords')
 ```
 
-4. **Extract datasets** (if using compressed files)
+3. **Extract datasets** (if using compressed files)
 ```bash
 # Extract the 7z files if needed
 7z x kaggle_fake_train.7z
